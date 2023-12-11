@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 182814290}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,7 +261,6 @@ MonoBehaviour:
   speedX: 8
   speedY: 8
   bulletPrefab: {fileID: 6193756284904850675, guid: 002ed843ee146cb49a7a52eea4cbf4eb, type: 3}
-  gunshotSound: {fileID: 8300000, guid: 4fa60925684631141910a6c012b67632, type: 3}
 --- !u!50 &182814289
 Rigidbody2D:
   serializedVersion: 4
@@ -444,8 +443,8 @@ MonoBehaviour:
   minXPosition: -8
   maxXPosition: 8
   objEnemeyPref: {fileID: 371614379136915018, guid: 3095697cf758c2f4db4ca6a7d25d096d, type: 3}
-  minTime: 0.5
-  maxTime: 2.5
+  minTime: 1
+  maxTime: 1
   gameManager: {fileID: 2060802020}
 --- !u!4 &357775423
 Transform:
@@ -896,8 +895,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -15}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 125, y: -25}
+  m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099107135
 MonoBehaviour:
@@ -921,20 +920,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 61c103c4190a26a42ac8ee42989ad61c, type: 3}
-    m_FontSize: 300
+    m_FontSize: 20
     m_FontStyle: 1
-    m_BestFit: 1
-    m_MinSize: 5
+    m_BestFit: 0
+    m_MinSize: 2
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 0
     m_AlignByGeometry: 1
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Puntos: 0
-
-'
+    m_LineSpacing: 0
+  m_Text: 'Puntaje: 0'
 --- !u!222 &1099107136
 CanvasRenderer:
   m_ObjectHideFlags: 0

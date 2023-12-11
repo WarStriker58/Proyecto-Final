@@ -29,7 +29,10 @@ public class PlayerControl : MonoBehaviour
         vertical = Input.GetAxis("Vertical");
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            if (Time.timeScale == 1)
+            {
+                Instantiate(bulletPrefab, transform.position, transform.rotation);
+            }
         }
     }
 

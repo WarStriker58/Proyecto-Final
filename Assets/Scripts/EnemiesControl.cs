@@ -8,6 +8,8 @@ public class EnemiesControl : MonoBehaviour
     private Rigidbody2D _compRigidbody;
     public float SpeedY;
     public GameManagerControlSS gameManager;
+    public GameObject bulletEnemyPrefab;
+    public float spawnInterval = 1.0f;
 
     void Awake()
     {
@@ -16,7 +18,13 @@ public class EnemiesControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("SpawnEnemyBullet", spawnInterval);
+    }
+
+    void SpawnEnemyBullet()
+    {
+        Instantiate(bulletEnemyPrefab, transform.position, bulletEnemyPrefab.transform.rotation);
+        Invoke("SpawnEnemyBullet", spawnInterval);
     }
 
     // Update is called once per frame

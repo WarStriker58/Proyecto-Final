@@ -29,7 +29,7 @@ public class EnemySpawnerControl : MonoBehaviour
     {
         float x = Random.Range(minXPosition, maxXPosition);
         Vector2 position = new Vector2(x, 6.5f);
-        GameObject enemy = Instantiate(objEnemeyPref,position, transform.rotation);
+        GameObject enemy = Instantiate(objEnemeyPref,position, objEnemeyPref.transform.rotation);
         float time = Random.Range(minTime, maxTime);
         enemy.GetComponent<EnemiesControl>().SetGameManager(gameManager);
         Invoke("CreateEnemy", time);
