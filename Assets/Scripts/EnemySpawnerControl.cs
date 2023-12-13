@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnemySpawnerControl : MonoBehaviour
 {
-    public GameObject explosionPrefab;
     public float minXPosition;
     public float maxXPosition;
     public GameObject objEnemeyPref;
     public float minTime;
     public float maxTime;
     public GameManagerControlSS gameManager;
+    public AudioSource explosionSound;
 
     // Start is called before the first frame update
     void Start()

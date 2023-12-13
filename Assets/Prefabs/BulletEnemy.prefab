@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6145786642122352132}
   m_Layer: 0
   m_Name: BulletEnemy
-  m_TagString: Untagged
+  m_TagString: BulletEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,4 +171,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a075a1cc0f6e549a99712c4ca65784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletEnemySpeed: 4
+  bulletEnemySpeed: 5

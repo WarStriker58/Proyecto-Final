@@ -334,9 +334,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManagerControl, Assembly-CSharp
-        m_MethodName: ChangeScene
+      - m_Target: {fileID: 1665637967}
+        m_TargetAssemblyTypeName: GameManagerControlVS, Assembly-CSharp
+        m_MethodName: ChangeSceneGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -504,9 +504,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManagerControl, Assembly-CSharp
-        m_MethodName: ChangeScene
+      - m_Target: {fileID: 1665637967}
+        m_TargetAssemblyTypeName: GameManagerControlVS, Assembly-CSharp
+        m_MethodName: ChangeSceneMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -613,7 +613,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 61c103c4190a26a42ac8ee42989ad61c, type: 3}
-    m_FontSize: 23
+    m_FontSize: 22
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -870,7 +870,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 61c103c4190a26a42ac8ee42989ad61c, type: 3}
-    m_FontSize: 23
+    m_FontSize: 22
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -899,6 +899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1665637966}
+  - component: {fileID: 1665637967}
   m_Layer: 0
   m_Name: GameManager(VictoryScene)
   m_TagString: Untagged
@@ -921,6 +922,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1665637967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665637965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa61a43e5a546534c8f843b12f6d8922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1700580654
 GameObject:
   m_ObjectHideFlags: 0

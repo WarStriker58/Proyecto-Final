@@ -10,11 +10,12 @@ public class EnemiesControl : MonoBehaviour
     public GameManagerControlSS gameManager;
     public GameObject bulletEnemyPrefab;
     public float spawnInterval = 1.0f;
-    public AudioSource explosionSound;
+    private AudioSource explosionSound;
 
     void Awake()
     {
         _compRigidbody = GetComponent<Rigidbody2D>();
+        explosionSound = GetComponent<AudioSource>();
     }
     // Start is called before the first frame update
     void Start()
@@ -43,16 +44,17 @@ public class EnemiesControl : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
+            explosionSound.Play();
             Destroy(this.gameObject);
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             gameManager.UpdatePoints(100);
-            explosionSound.Play();
         }
         else if (collision.gameObject.tag == "EnemiesLimit")
         {
             Destroy(this.gameObject);
         }
     }
+
     public void SetGameManager(GameManagerControlSS gm)
     {
         gameManager = gm;

@@ -11,6 +11,10 @@ public class PlayerControl : MonoBehaviour
     private float horizontal;
     private float vertical;
     public AudioSource gunshotSound;
+    public AudioSource explosionSound;
+    public int lives = 3;
+    public GameObject explosionPrefab;
+    public GameManagerControlSS gameManager;
 
     void Awake()
     {
@@ -42,4 +46,25 @@ public class PlayerControl : MonoBehaviour
     {
         _compRigidbody.velocity = new Vector2(horizontal*speedX, vertical*speedY);
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "BulletEnemy" || collision.gameObject.tag == "Enemy")
+        {
+            gameManager.UpdateLives();
+            DestroyPlayer();
+        }
+    }
+
+    void DestroyPlayer()
+    {
+        if (gameManager.lives <= 0)
+        {
+            Destroy(gameObject);
+            explosionSound.Play();
+            Instantiate(explosionPrefab, transform.position, transform.rotation);
+            gameManager.PlayerDefeated();
+        }
+    }
+
 }
