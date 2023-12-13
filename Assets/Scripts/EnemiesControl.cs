@@ -10,6 +10,7 @@ public class EnemiesControl : MonoBehaviour
     public GameManagerControlSS gameManager;
     public GameObject bulletEnemyPrefab;
     public float spawnInterval = 1.0f;
+    public AudioSource explosionSound;
 
     void Awake()
     {
@@ -45,6 +46,7 @@ public class EnemiesControl : MonoBehaviour
             Destroy(this.gameObject);
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             gameManager.UpdatePoints(100);
+            explosionSound.Play();
         }
         else if (collision.gameObject.tag == "EnemiesLimit")
         {
