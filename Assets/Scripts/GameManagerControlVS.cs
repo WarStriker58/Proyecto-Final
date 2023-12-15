@@ -5,23 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerControlVS : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void ChangeScene(string sceneName)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        SceneManager.LoadScene(sceneName);
     }
     public void ChangeSceneMenu()
     {
-        SceneManager.LoadScene("OpeningScene");
+        ChangeScene("OpeningScene");
     }
+
     public void ChangeSceneGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        ChangeScene("SampleScene");
     }
 }

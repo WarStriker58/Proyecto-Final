@@ -14,15 +14,27 @@ public class GameManagerControlSS : MonoBehaviour
     public float victoryTime = 120f;  
     private float elapsedTime = 0f;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         UpdatePoints(0);
         UpdateLives();
     }
 
-    // Update is called once per frame
+    public void ChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void ChangeSceneVictory()
+    {
+        ChangeScene("VictoryScene");
+    }
+
+    public void ChangeSceneDefeat()
+    {
+        ChangeScene("DefeatScene");
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -36,13 +48,13 @@ public class GameManagerControlSS : MonoBehaviour
                 PauseGame();
             }
         }
-
         elapsedTime = elapsedTime + Time.deltaTime;
         if (elapsedTime >= victoryTime)
         {
-            SceneManager.LoadScene("VictoryScene");
+            ChangeSceneVictory();
         }
     }
+
     public void PauseGame()
     {
         Time.timeScale = 0;
@@ -69,6 +81,6 @@ public class GameManagerControlSS : MonoBehaviour
 
     public void PlayerDefeated()
     {
-        SceneManager.LoadScene("DefeatScene");
+        ChangeSceneDefeat();
     }
 }

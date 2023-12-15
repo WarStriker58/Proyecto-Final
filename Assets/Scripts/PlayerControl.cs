@@ -11,7 +11,6 @@ public class PlayerControl : MonoBehaviour
     private float horizontal;
     private float vertical;
     public AudioSource gunshotSound;
-    public AudioSource explosionSound;
     public int lives = 3;
     public GameObject explosionPrefab;
     public GameManagerControlSS gameManager;
@@ -21,13 +20,6 @@ public class PlayerControl : MonoBehaviour
         _compRigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
@@ -61,10 +53,8 @@ public class PlayerControl : MonoBehaviour
         if (gameManager.lives <= 0)
         {
             Destroy(gameObject);
-            explosionSound.Play();
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             gameManager.PlayerDefeated();
         }
     }
-
 }

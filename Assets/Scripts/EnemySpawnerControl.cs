@@ -10,19 +10,11 @@ public class EnemySpawnerControl : MonoBehaviour
     public float minTime;
     public float maxTime;
     public GameManagerControlSS gameManager;
-    public AudioSource explosionSound;
 
-    // Start is called before the first frame update
     void Start()
     {
         float time = Random.Range(minTime, maxTime);
         Invoke("CreateEnemy", time);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void CreateEnemy()

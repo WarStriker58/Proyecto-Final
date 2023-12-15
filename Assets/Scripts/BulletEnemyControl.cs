@@ -12,18 +12,6 @@ public class BulletEnemyControl : MonoBehaviour
         _compRigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void FixedUpdate()
     {
         _compRigidbody.velocity = new Vector2(0, bulletEnemySpeed * -1);

@@ -10,22 +10,14 @@ public class GameManagerControl : MonoBehaviour
     public GameObject howtoplayContainer;
     public GameObject creditsContainer;
 
-    // Start is called before the first frame update
-    void Start()
+    public void ChangeScene(string sceneName)
     {
-
+        SceneManager.LoadScene(sceneName);
     }
 
-
-    // Update is called once per frame
-    void Update()
+    public void ChangeSceneGame()
     {
-        
-    }
-
-    public void ChangeScene()
-    {
-        SceneManager.LoadScene("SampleScene");
+        ChangeScene("SampleScene");
     }
 
     public void ChangeStateHowToPlayContainer()

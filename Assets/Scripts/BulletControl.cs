@@ -11,21 +11,12 @@ public class BulletControl : MonoBehaviour
     {
         _compRigidbody = GetComponent<Rigidbody2D>();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void FixedUpdate()
     {
         _compRigidbody.velocity = new Vector2(0, bulletSpeed * 1);
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
